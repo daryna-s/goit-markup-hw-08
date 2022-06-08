@@ -1,0 +1,28 @@
+%centeredFlex {
+    display: flex;
+    align-items: center;
+}
+
+%button {
+    padding: 10px 32px;
+    min-width: 200px;
+    min-height: 50px;
+    margin: 0 auto;
+    border-radius: 4px;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    border: none;
+
+    color: var(--next2-txt-cl);
+    background-color: var(--accent-bg-cl);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
