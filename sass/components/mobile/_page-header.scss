@@ -1,0 +1,28 @@
+.page-header {
+    border-bottom: 1px solid var(--border-cl);
+
+    &__container {
+        @extend %centeredFlex;
+    }
+
+    &__header-logo {
+        font-family: var(--secondary-font);
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 1.17;
+        letter-spacing: 0.03em;
+
+        color: var(--next1-txt-cl);
+    }
+
+    &__logo-up {
+        font-family: var(--secondary-font);
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 1.17;
+        letter-spacing: 0.03em;
+        
+
+        color: var(--accent-txt-cl);
+    }
+}

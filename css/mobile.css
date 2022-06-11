@@ -73,9 +73,22 @@ address {
   margin: 0 auto;
 }
 
+@media screen and (max-width: 479px) {
+  .container {
+    width: 480px;
+  }
+}
+
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
+}
+
+@media screen and (max-width: 479px) {
+  .section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 
 .list {
@@ -261,18 +274,17 @@ address {
   }
 }
 
-.features-list__item__title {
+.features-list__title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  width: 270px;
   margin-bottom: 10px;
   color: var(--secondary-txt-cl);
 }
 
-.features-list__item__text {
+.features-list__text {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;

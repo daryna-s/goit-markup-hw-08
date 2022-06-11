@@ -26,6 +26,9 @@ address {
 
 .container {
     width: 1200px;
+    @media screen and (max-width: 479px){
+        width: 480px;
+    }
     padding-left: 15px;
     padding-right: 15px;
     margin: 0 auto;
@@ -34,6 +37,10 @@ address {
 .section {
     padding-top: 94px;
     padding-bottom: 94px;
+    @media screen and (max-width: 479px) {
+        padding-top: 60px;
+            padding-bottom: 60px;
+    }
 }
 
 .list {
