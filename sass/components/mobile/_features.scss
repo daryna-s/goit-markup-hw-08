@@ -26,6 +26,15 @@
             height: 251px;
         }
     }
+                &__link {
+                    display: block;
+                    width: 450px;
+                    height: 120px;
+                    padding: 25px 190px 25px 190px;
+                    margin-bottom: 30px;
+                    background-color: var(--next1-bg-cl);
+                    border-radius: 4px;
+                }
         &__title {
             font-weight: 700;
             font-size: 14px;

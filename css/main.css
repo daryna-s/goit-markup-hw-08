@@ -138,6 +138,7 @@ address {
 
 .page-header {
   border-bottom: 1px solid var(--border-cl);
+  position: relative;
 }
 
 .page-header__header-logo {
@@ -155,7 +156,61 @@ address {
   font-size: 24px;
   line-height: 1.17;
   letter-spacing: 0.03em;
+  padding-top: 15px;
+  padding-bottom: 15px;
   color: var(--accent-txt-cl);
+}
+
+.menu-button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 0;
+  margin-left: auto;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.menu-button .icon-close {
+  display: none;
+}
+
+.menu-button.is-open .icon-close {
+  display: block;
+}
+
+.icon-close:hover,
+.icon-close:focus,
+.icon-menu:hover,
+.icon-menu:focus {
+  fill: var(--accent-txt-cl);
+}
+
+.menu-button.is-open .icon-menu {
+  display: none;
+}
+
+.navigation,
+.site-contacts {
+  display: none;
+}
+
+.menu-container {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 400px;
+  background-color: red;
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.menu-container.is-open {
+  display: block;
 }
 
 .backdrop {
@@ -168,6 +223,7 @@ address {
   opacity: 1;
   -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: scroll;
 }
 
 .backdrop.is-hidden {
@@ -181,8 +237,8 @@ address {
   left: 50%;
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
-  width: 528px;
-  height: 581px;
+  width: 450px;
+  height: 609px;
   background-color: var(--main-bg-cl);
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -217,6 +273,7 @@ address {
 }
 
 .form__title {
+  width: 370px;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
@@ -311,9 +368,7 @@ address {
   resize: none;
   padding: 12px 16px;
   font-family: inherit;
-  font-size: 14px;
-  line-height: 1.15;
-  letter-spacing: 0.01em;
+  font-size: inherit;
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   cursor: pointer;
@@ -321,8 +376,8 @@ address {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form__textarea:not(:placeholder-shown) {
-  color: var(--main-txt-cl);
+.form__textarea:invalid:not(:placeholder-shown) {
+  color: rgba(33, 33, 33, 0.2);
 }
 
 .form__textarea:focus, .form__textarea:hover {
@@ -331,6 +386,7 @@ address {
 }
 
 .form__checkbox {
+  width: 370px;
   margin-bottom: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -383,8 +439,8 @@ address {
 }
 
 .form__icon-checkbox {
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: var(--main-txt-cl);
 }
@@ -403,14 +459,12 @@ address {
 
 .hero {
   background-color: var(--new-secondary-bg-cl);
-  padding-top: 200px;
-  padding-bottom: 200px;
-  max-width: 1600px;
-  min-height: 600px;
+  max-width: 480px;
+  min-height: 400px;
   margin-left: auto;
   margin-right: auto;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero.jpg");
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero.jpg");
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/mobile/hero.jpg");
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/mobile/hero.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -470,6 +524,16 @@ address {
   }
 }
 
+.features-list__link {
+  display: block;
+  width: 450px;
+  height: 120px;
+  padding: 25px 190px 25px 190px;
+  margin-bottom: 30px;
+  background-color: var(--next1-bg-cl);
+  border-radius: 4px;
+}
+
 .features-list__title {
   font-weight: 700;
   font-size: 14px;
@@ -485,6 +549,10 @@ address {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--main-txt-cl);
+}
+
+.work-description {
+  display: none;
 }
 
 .employees {
@@ -536,6 +604,11 @@ address {
 
 .team__item .team-person {
   padding: 30px 32px;
+}
+
+.team__img {
+  width: 450px;
+  height: 460px;
 }
 
 .team-person__title {
@@ -697,11 +770,12 @@ address {
 
 .footer-block-contacts {
   margin-bottom: 60px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
 }
 
 .footer-block-contacts__logo-down {
-  padding-left: 163px;
-  padding-right: 163px;
   margin-bottom: 20px;
   display: inline-block;
   font-family: var(--secondary-font);
@@ -722,8 +796,7 @@ address {
 }
 
 .footer-contacts {
-  padding-left: 124px;
-  padding-right: 124px;
+  padding: 0;
   margin: 0;
   list-style: none;
 }
@@ -754,10 +827,16 @@ address {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.link:hover,
+.link:focus {
+  color: var(--accent-txt-cl);
+}
+
 .socials-join {
   margin-bottom: 60px;
-  padding-left: 137px;
-  padding-right: 137px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
 }
 
 .socials-join__title {
@@ -774,6 +853,9 @@ address {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .footer-socials__link {
@@ -808,7 +890,9 @@ address {
 }
 
 .footer-form {
-  margin-bottom: 60px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
 }
 
 .footer-form__title {
@@ -821,18 +905,11 @@ address {
   color: var(--next2-txt-cl);
 }
 
-.footer-email {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
 .footer-email__input {
   padding-left: 16px;
   padding-top: 15px;
   padding-bottom: 15px;
-  margin-right: 12px;
-  width: 358px;
+  width: 450px;
   height: 50px;
   background-color: var(--secondary-bg-cl);
   color: rgba(255, 255, 255, 0.6);
@@ -856,6 +933,10 @@ address {
 
 .footer-button-icon {
   margin-left: 10px;
+}
+
+.button {
+  margin-top: 20px;
 }
 
 .portfolio {
