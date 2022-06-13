@@ -4,6 +4,7 @@
 
     &__container {
         @extend %centeredFlex;
+        
     }
 
     &__header-logo {
@@ -68,25 +69,18 @@
 }
 
 .menu-container {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
     background-color: var(--main-bg-cl);
     padding: 40px 48px;
     z-index: 1;
 
-    @media screen and(max-width:767px) {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-
-        &.is-open {
-            display: block;
-            top: 0;
-        }
-    }
-
-    @media screen and(min-width:768px) {
-        display: flex;
+    &.is-open {
+        display: block;
+        top: 0;
     }
 }
 
