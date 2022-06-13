@@ -19,7 +19,13 @@
         <div class="container page-header__container">
     
             <a href="" class="page-header__logo-up link">Web<span class="page-header__header-logo">Studio</span></a>
-    
+    <button class="menu-button is-open" type="button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+        <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+            <use class="icon-close" href="./images/mobile/symbol-defs (7).svg#icon-close_sm"></use>
+            <use class="icon-menu" href="./images/mobile/symbol-defs (7).svg#icon-menu_sm"></use>
+        </svg>
+    </button>
+    <div class="menu-container is-open" id="menu-container" data-menu>
             <nav class="navigation">
                 <ul class="site-nav list">
                     <li class="site-nav__item">
@@ -36,7 +42,7 @@
     
             <ul class="site-contacts list">
                 <li class="site-contacts__item">
-                    <a class="site-contacts__link" href="mailto:info@devstudio.com">
+                    <a class="site-contacts__link-mail" href="mailto:info@devstudio.com">
                         <svg class="site-contacts__icon" width="16" height="12">
                             <use href="./images/icons.svg#icon-envelope">
                             </use>
@@ -45,7 +51,7 @@
                     </a>
                 </li>
                 <li class="site-contacts__item">
-                    <a class="site-contacts__link" href="tel:+380961111111">
+                    <a class="site-contacts__link-tel" href="tel:+380961111111">
                         <svg class="site-contacts__icon" width="10" height="16">
                             <use href="./images/icons.svg#icon-smartphone">
                             </use>
@@ -54,6 +60,30 @@
                     </a>
                 </li>
             </ul>
+
+            <ul class="header-socials list">
+                <li class="header-socials__item">
+                    <a class="header-socials__link" href="" target="_blank" rel="noopener noreferrer" aria-label="иконка Instagram">
+                        Instagram
+                    </a>
+                </li>
+                <li class="header-socials__item">
+                    <a class="header-socials__link" href="" target="_blank" rel="noopener noreferrer" aria-label="иконка Twitter">
+                        Twitter
+                    </a>
+                </li>
+                <li class="header-socials__item">
+                    <a class="header-socials__link" href="" target="_blank" rel="noopener noreferrer" aria-label="иконка Facebook">
+                        Facebook
+                    </a>
+                </li>
+                <li class="header-socials__item">
+                    <a class="header-socials__link" href="" target="_blank" rel="noopener noreferrer" aria-label="иконка Linkedin">
+                        Linkedin
+                    </a>
+                </li>
+            </ul>
+            </div>
         </div>
     </header>
 <main>
@@ -315,5 +345,6 @@
         </form>
     </div>
 </footer>
+<script defer src="js/mobile-menu.js"></script>
 </body>
 </html>
