@@ -2,8 +2,6 @@
     background-color: var(--new-secondary-bg-cl);
     padding-top: 118px;
     padding-bottom: 118px;
-    max-width: 1600px;
-    min-height: 600px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -69,7 +67,7 @@
                
             @media screen and (min-width: 1200px) {
                 font-size: 44px;
-                width: 696px;
+                max-width: 696px;
         line-height: 1.36;
             }
     }

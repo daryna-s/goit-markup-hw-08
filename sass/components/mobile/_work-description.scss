@@ -43,6 +43,8 @@
         height: 70px;
     }
 }
-.work-description{
-    display: none;
+
+.work-description {
+    @media screen and (max-width: 1199.98px){
+    display: none;}
 }
