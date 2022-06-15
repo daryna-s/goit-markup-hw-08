@@ -25,7 +25,13 @@ address {
 
 
 .container {
-    
+    padding-left: 15px;
+        padding-right: 15px;
+        margin: 0 auto;
+        width: 100%;
+    @media screen and (min-width: 320px) {
+            width: 320px;
+        }
     @media screen and (min-width: 480px){
         width: 480px;
     }
@@ -35,9 +41,7 @@ address {
                 @media screen and (min-width: 1200px) {
                     width: 1200px;
                 }
-    padding-left: 15px;
-    padding-right: 15px;
-    margin: 0 auto;
+    
 }
 
 .section {
@@ -51,7 +55,7 @@ address {
 
 .list {
     list-style: none;
-    padding-left: 0;
+    padding: 0;
     margin: 0;
 }
 
