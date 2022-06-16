@@ -579,6 +579,12 @@ address {
   margin: 0 auto;
 }
 
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+  }
+}
+
 .modal__btn {
   position: absolute;
   top: 8px;
