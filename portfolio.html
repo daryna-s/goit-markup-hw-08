@@ -15,17 +15,20 @@
 <link rel="stylesheet" href="./css/main.min.css" />
 </head>
 <body>
-    <header class="page-header">
-        <div class="container page-header__container">
-    
-            <a href="" class="page-header__logo-up link">Web<span class="page-header__header-logo">Studio</span></a>
-    <button class="menu-button" type="button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
-        <svg width="40" height="40" aria-label="Переключатель мобильного меню">
-            <use class="icon-close" href="./images/mobile/symbol-defs (7).svg#icon-close_sm"></use>
-            <use class="icon-menu" href="./images/mobile/symbol-defs (7).svg#icon-menu_sm"></use>
-        </svg>
-    </button>
-    <div class="menu-container" id="menu-container" data-menu>
+
+<header class="page-header">
+    <div class="container page-header__container">
+
+        <a href="" class="page-header__logo-up link">Web<span class="page-header__header-logo">Studio</span>
+        </a>
+
+        <button class="menu-button" type="button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+            <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+                <use class="icon-close" href="./images/header-menu.svg#icon-close_sm"></use>
+                <use class="icon-menu" href="./images/header-menu.svg#icon-menu_sm"></use>
+            </svg>
+        </button>
+        <div class="menu-container" id="menu-container" data-menu>
             <nav class="navigation">
                 <ul class="site-nav list">
                     <li class="site-nav__item">
@@ -39,7 +42,7 @@
                     </li>
                 </ul>
             </nav>
-    
+
             <ul class="site-contacts list">
                 <li class="site-contacts__item">
                     <a class="site-contacts__link-mail" href="mailto:info@devstudio.com">
@@ -63,29 +66,36 @@
 
             <ul class="header-socials list">
                 <li class="header-socials__item">
-                    <a class="header-socials__link" href="" target="_blank" rel="noopener noreferrer" aria-label="иконка Instagram">
+                    <a class="header-socials__link" href="" target="_blank" rel="noopener noreferrer"
+                        aria-label="иконка Instagram">
                         Instagram
                     </a>
                 </li>
                 <li class="header-socials__item">
-                    <a class="header-socials__link" href="" target="_blank" rel="noopener noreferrer" aria-label="иконка Twitter">
+                    <a class="header-socials__link" href="" target="_blank" rel="noopener noreferrer"
+                        aria-label="иконка Twitter">
                         Twitter
                     </a>
                 </li>
                 <li class="header-socials__item">
-                    <a class="header-socials__link" href="" target="_blank" rel="noopener noreferrer" aria-label="иконка Facebook">
+                    <a class="header-socials__link" href="" target="_blank" rel="noopener noreferrer"
+                        aria-label="иконка Facebook">
                         Facebook
                     </a>
                 </li>
                 <li class="header-socials__item">
-                    <a class="header-socials__link" href="" target="_blank" rel="noopener noreferrer" aria-label="иконка Linkedin">
+                    <a class="header-socials__link" href="" target="_blank" rel="noopener noreferrer"
+                        aria-label="иконка Linkedin">
                         Linkedin
                     </a>
                 </li>
             </ul>
-            </div>
+
+
         </div>
-    </header>
+    </div>
+</header>
+    
 <main>
 
     <!-- кнопки фильтра -->
@@ -115,8 +125,20 @@
         <li class="work-examples-list__item link">
             <a class="work-examples-list__link" href="">
             <div class="img-overlay">
-            <img class="img-overlay__example" src="./images/portfolio/img-tehnokryak.jpg" alt="Технокряк" width="370"
-                height="294">
+                <picture>
+                    <source media="(min-width: 1200px)"
+                        srcset="./images/portfolio/img1-desktop-1x.jpg 1x, ./images/portfolio/img1-desktop-2x.jpg 2x"
+                        type="image/jpg" />
+                    <source media="(min-width: 768px)"
+                        srcset="./images/portfolio/img1-tablet-1x.jpg 1x, ./images/portfolio/img1-tablet-2x.jpg 2x"
+                        type="image/jpg" />
+                    <source media="(max-width: 767px)"
+                        srcset="./images/portfolio/img1-mobile-1x.jpg 1x, ./images/portfolio/img1-mobile-2x.jpg 2x"
+                        type="image/jpg" />
+                    <img class="img-overlay__example" src="./images/portfolio/img1-mobile-1x.jpg" alt="Технокряк" width="450" height="294"
+                        loading="lazy"/>
+                </picture>
+            
                 <div class="container-overlay">
                 <p class="container-overlay__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить
                 исчерпывающие сведения о компании или частном лице.</p>
@@ -132,8 +154,21 @@
         <li class="work-examples-list__item link">
             <a class="work-examples-list__link" href="">
                 <div class="img-overlay">
-            <img class="img-overlay__example" src="./images/portfolio/img-poster.jpg" alt="Постер New Orlean vs Golden Star"
-                width="370" height="294">
+                    <picture>
+                        <source media="(min-width: 1200px)"
+                            srcset="./images/portfolio/img2-desktop-1x.jpg 1x, ./images/portfolio/img2-desktop-2x.jpg 2x"
+                            type="image/jpg" />
+                        <source media="(min-width: 768px)"
+                            srcset="./images/portfolio/img2-tablet-1x.jpg 1x, ./images/portfolio/img2-tablet-2x.jpg 2x" type="image/jpg" />
+                        <source media="(max-width: 767px)"
+                            srcset="./images/portfolio/img2-mobile-1x.jpg 1x, ./images/portfolio/img2-mobile-2x.jpg 2x" type="image/jpg" />
+                        <img class="img-overlay__example" 
+                        src="./images/portfolio/img2-mobile-1x.jpg" 
+                        alt="Постер New Orlean vs Golden Star" 
+                        width="450"
+                            height="294" loading="lazy" />
+                    </picture>
+            
                 <div class="container-overlay">
                     <p class="container-overlay__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
                         позволит посетителю получить
@@ -149,8 +184,20 @@
         <li class="work-examples-list__item link">
             <a class="work-examples-list__link" href="">
                 <div class="img-overlay">
-            <img class="img-overlay__example" src="./images/portfolio/img-seafood.jpg" alt="Ресторан Seafood" width="370"
-                height="294">
+                    <picture>
+                        <source media="(min-width: 1200px)"
+                            srcset="./images/portfolio/img3-desktop-1x.jpg 1x, ./images/portfolio/img3-desktop-2x.jpg 2x"
+                            type="image/jpg" />
+                        <source media="(min-width: 768px)"
+                            srcset="./images/portfolio/img3-tablet-1x.jpg 1x, ./images/portfolio/img3-tablet-2x.jpg 2x" type="image/jpg" />
+                        <source media="(max-width: 767px)"
+                            srcset="./images/portfolio/img3-mobile-1x.jpg 1x, ./images/portfolio/img3-mobile-2x.jpg 2x" type="image/jpg" />
+                        <img class="img-overlay__example" 
+                        src="./images/portfolio/img3-mobile-1x.jpg" 
+                        alt="Ресторан Seafood"
+                            width="450" height="294" loading="lazy" />
+                    </picture>
+            
                 <div class="container-overlay">
                     <p class="container-overlay__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
                         позволит посетителю получить
@@ -166,7 +213,18 @@
         <li class="work-examples-list__item link">
             <a class="work-examples-list__link" href="">
                 <div class="img-overlay">
-            <img class="img-overlay__example" src="./images/portfolio/img-prime.jpg" alt="Проект Prime" width="370" height="294">
+                    <picture>
+                        <source media="(min-width: 1200px)"
+                            srcset="./images/portfolio/img4-desktop-1x.jpg 1x, ./images/portfolio/img4-desktop-2x.jpg 2x"
+                            type="image/jpg" />
+                        <source media="(min-width: 768px)"
+                            srcset="./images/portfolio/img4-tablet-1x.jpg 1x, ./images/portfolio/img4-tablet-2x.jpg 2x" type="image/jpg" />
+                        <source media="(max-width: 767px)"
+                            srcset="./images/portfolio/img4-mobile-1x.jpg 1x, ./images/portfolio/img4-mobile-2x.jpg 2x" type="image/jpg" />
+                        <img class="img-overlay__example" src="./images/portfolio/img4-mobile-1x.jpg" alt="Проект Prime" width="450"
+                            height="294" loading="lazy" />
+                    </picture>
+            
             <div class="container-overlay">
                 <p class="container-overlay__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
                     позволит посетителю получить
@@ -182,7 +240,18 @@
         <li class="work-examples-list__item link">
             <a class="work-examples-list__link" href="">
                 <div class="img-overlay">
-            <img class="img-overlay__example" src="./images/portfolio/img-boxes.jpg" alt="Проект Boxes" width="370" height="294">
+                    <picture>
+                        <source media="(min-width: 1200px)"
+                            srcset="./images/portfolio/img5-desktop-1x.jpg 1x, ./images/portfolio/img5-desktop-2x.jpg 2x"
+                            type="image/jpg" />
+                        <source media="(min-width: 768px)"
+                            srcset="./images/portfolio/img5-tablet-1x.jpg 1x, ./images/portfolio/img5-tablet-2x.jpg 2x" type="image/jpg" />
+                        <source media="(max-width: 767px)"
+                            srcset="./images/portfolio/img5-mobile-1x.jpg 1x, ./images/portfolio/img5-mobile-2x.jpg 2x" type="image/jpg" />
+                        <img class="img-overlay__example" src="./images/portfolio/img5-mobile-1x.jpg" alt="Проект Boxes" width="450"
+                            height="294" loading="lazy" />
+                    </picture>
+            
             
             <div class="container-overlay">
                 <p class="container-overlay__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
@@ -199,8 +268,18 @@
         <li class="work-examples-list__item link">
             <a class="work-examples-list__link" href="">
                 <div class="img-overlay">
-            <img class="img-overlay__example" src="./images/portfolio/img-inspirationhasnoborders.jpg"
-                alt="Inspiration has no Borders" width="370" height="294">
+                    <picture>
+                        <source media="(min-width: 1200px)"
+                            srcset="./images/portfolio/img6-desktop-1x.jpg 1x, ./images/portfolio/img6-desktop-2x.jpg 2x"
+                            type="image/jpg" />
+                        <source media="(min-width: 768px)"
+                            srcset="./images/portfolio/img6-tablet-1x.jpg 1x, ./images/portfolio/img6-tablet-2x.jpg 2x" type="image/jpg" />
+                        <source media="(max-width: 767px)"
+                            srcset="./images/portfolio/img6-mobile-1x.jpg 1x, ./images/portfolio/img6-mobile-2x.jpg 2x" type="image/jpg" />
+                        <img class="img-overlay__example" src="./images/portfolio/img6-mobile-1x.jpg" alt="Inspiration has no Borders" width="450"
+                            height="294" loading="lazy" />
+                    </picture>
+            
             <div class="container-overlay">
                 <p class="container-overlay__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
                     позволит посетителю получить
@@ -216,8 +295,18 @@
         <li class="work-examples-list__item link">
             <a class="work-examples-list__link" href="">
                 <div class="img-overlay">
-            <img class="img-overlay__example" src="./images/portfolio/img-limitededition.jpg" alt="НИздание Limited Edition"
-                width="370" height="294">
+                    <picture>
+                        <source media="(min-width: 1200px)"
+                            srcset="./images/portfolio/img7-desktop-1x.jpg 1x, ./images/portfolio/img7-desktop-2x.jpg 2x"
+                            type="image/jpg" />
+                        <source media="(min-width: 768px)"
+                            srcset="./images/portfolio/img7-tablet-1x.jpg 1x, ./images/portfolio/img7-tablet-2x.jpg 2x" type="image/jpg" />
+                        <source media="(max-width: 767px)"
+                            srcset="./images/portfolio/img7-mobile-1x.jpg 1x, ./images/portfolio/img7-mobile-2x.jpg 2x" type="image/jpg" />
+                        <img class="img-overlay__example" src="./images/portfolio/img7-mobile-1x.jpg" alt="Издание Limited Edition"
+                            width="450" height="294" loading="lazy" />
+                    </picture>
+            
             <div class="container-overlay">
                 <p class="container-overlay__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
                     позволит посетителю получить
@@ -233,7 +322,18 @@
         <li class="work-examples-list__item link">
             <a class="work-examples-list__link" href="">
                 <div class="img-overlay">
-            <img class="img-overlay__example" src="./images/portfolio/img-lab.jpg" alt="Проект LAB" width="370" height="294">
+                    <picture>
+                        <source media="(min-width: 1200px)"
+                            srcset="./images/portfolio/img8-desktop-1x.jpg 1x, ./images/portfolio/img8-desktop-2x.jpg 2x"
+                            type="image/jpg" />
+                        <source media="(min-width: 768px)"
+                            srcset="./images/portfolio/img8-tablet-1x.jpg 1x, ./images/portfolio/img8-tablet-2x.jpg 2x" type="image/jpg" />
+                        <source media="(max-width: 767px)"
+                            srcset="./images/portfolio/img8-mobile-1x.jpg 1x, ./images/portfolio/img8-mobile-2x.jpg 2x" type="image/jpg" />
+                        <img class="img-overlay__example" src="./images/portfolio/img8-mobile-1x.jpg" alt="Проект LAB"
+                            width="450" height="294" loading="lazy" />
+                    </picture>
+            
             <div class="container-overlay">
                 <p class="container-overlay__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
                     позволит посетителю получить
@@ -249,8 +349,18 @@
         <li class="work-examples-list__item link">
             <a class="work-examples-list__link" href="">
                 <div class="img-overlay">
-            <img class="img-overlay__example" src="./images/portfolio/img-growingbusiness.jpg" alt="Growing Business" width="370"
-                height="294">
+                    <picture>
+                        <source media="(min-width: 1200px)"
+                            srcset="./images/portfolio/img9-desktop-1x.jpg 1x, ./images/portfolio/img9-desktop-2x.jpg 2x"
+                            type="image/jpg" />
+                        <source media="(min-width: 768px)"
+                            srcset="./images/portfolio/img9-tablet-1x.jpg 1x, ./images/portfolio/img9-tablet-2x.jpg 2x" type="image/jpg" />
+                        <source media="(max-width: 767px)"
+                            srcset="./images/portfolio/img9-mobile-1x.jpg 1x, ./images/portfolio/img9-mobile-2x.jpg 2x" type="image/jpg" />
+                        <img class="img-overlay__example" src="./images/portfolio/img9-mobile-1x.jpg" alt="Growing Business" width="450"
+                            height="294" loading="lazy" />
+                    </picture>
+            
             <div class="container-overlay">
                 <p class="container-overlay__text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
                     позволит посетителю получить
