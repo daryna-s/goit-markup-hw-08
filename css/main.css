@@ -293,6 +293,7 @@ address {
       -ms-flex-direction: column;
           flex-direction: column;
   top: 0;
+  overflow: scroll;
 }
 
 @media screen and (min-width: 768px) {
@@ -757,6 +758,50 @@ address {
   margin-bottom: 20px;
 }
 
+.form__comment .form__textarea::-webkit-input-placeholder {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.form__comment .form__textarea:-ms-input-placeholder {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.form__comment .form__textarea::-ms-input-placeholder {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.form__comment .form__textarea::placeholder {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.form__comment .form__textarea:hover::-webkit-input-placeholder {
+  color: rgba(33, 33, 33, 0.2);
+}
+
+.form__comment .form__textarea:hover:-ms-input-placeholder {
+  color: rgba(33, 33, 33, 0.2);
+}
+
+.form__comment .form__textarea:hover::-ms-input-placeholder {
+  color: rgba(33, 33, 33, 0.2);
+}
+
+.form__comment .form__textarea:hover::placeholder {
+  color: rgba(33, 33, 33, 0.2);
+}
+
 .form__textarea {
   height: 120px;
   resize: none;
@@ -768,10 +813,6 @@ address {
   cursor: pointer;
   -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.form__textarea:invalid:not(:placeholder-shown) {
-  color: rgba(33, 33, 33, 0.2);
 }
 
 .form__textarea:focus, .form__textarea:hover {
@@ -833,6 +874,13 @@ address {
   line-height: 1.17;
   letter-spacing: 0.03em;
   color: var(--main-txt-cl);
+}
+
+@media screen and (min-width: 1200px) {
+  .form__icon-checkbox {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .form__checkbox-link {
@@ -1724,10 +1772,10 @@ address {
   background-color: rgba(33, 150, 243, 0.9);
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
-  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .work-examples-list__link:hover .container-overlay,
@@ -1735,8 +1783,6 @@ address {
   -webkit-transform: translateY(0);
           transform: translateY(0);
   opacity: 1;
-  -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .container-overlay__text {
