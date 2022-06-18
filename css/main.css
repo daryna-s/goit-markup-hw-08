@@ -1794,6 +1794,14 @@ address {
   color: var(--next2-txt-cl);
 }
 
+@media screen and (max-width: 400px) {
+  .container-overlay__text {
+    padding: 24px;
+    font-size: 14px;
+    line-height: 1.56;
+  }
+}
+
 .work-details {
   padding: 20px 24px 20px 24px;
   border: 1px solid var(--border-cl);
