@@ -279,8 +279,14 @@ address {
 }
 
 .menu-container.is-open {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   top: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 @media screen and (min-width: 768px) {
@@ -288,6 +294,10 @@ address {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     position: static;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -395,7 +405,13 @@ address {
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
-  margin-top: auto;
+}
+
+@media screen and (max-width: 767.98px) {
+  .site-contacts {
+    margin-top: auto;
+    margin-bottom: 64px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
@@ -756,9 +772,6 @@ address {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
