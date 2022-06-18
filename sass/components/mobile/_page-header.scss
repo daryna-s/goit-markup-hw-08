@@ -1,7 +1,6 @@
 .page-header {
     border-bottom: 1px solid var(--border-cl);
     
-
     &__container {
         
         position: relative;
@@ -88,7 +87,6 @@
 
 .menu-container {
     display: none;
-    // position: absolute;
     position: fixed;
     top: 0;
     left: 0;
@@ -106,11 +104,10 @@
     }
 
     &.is-open {
-        // display: block;
         display: flex;
-        top: 0;
         flex-direction: column;
-
+        top: 0;
+        
         @media screen and (min-width: 768px) {
             display: flex;
             flex-direction: row;
@@ -120,13 +117,6 @@
         }
     }
 }
-
-// .navigation {
-
-//     @media screen and (max-width: 767.98px) {
-//         margin-bottom: auto;
-//     }
-// }
 
 .site-nav {
     @media screen and (min-width: 768px) {
@@ -213,22 +203,19 @@
     }
 }
 
-
 .link:hover,
 .link:focus {
     color: var(--accent-txt-cl);
 }
 
 .site-contacts {
-
     display: flex;
     flex-direction: column-reverse;
     @media screen and(max-width: 767.98px) {
             margin-top: auto;
-                margin-bottom: 64px;
+            margin-bottom: 64px;
         }
     
-
     @media screen and (min-width: 768px) and (max-width: 1199.98px) {
         flex-direction: column;
         margin-left: auto;

@@ -17,9 +17,13 @@
     margin-bottom: 60px;
     margin-right: auto;
     margin-left: auto;
-
     @media screen and (max-width: 1199.98px) {
         text-align: center;
+        }
+
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 0;
+        margin-left: 0;
     }
 
     &__logo-down {
@@ -92,6 +96,9 @@
     @media screen and (max-width: 1199.98px) {
         text-align: center;
     }
+        @media screen and (min-width: 1200px) {
+            margin-bottom: 0;
+        }
 
     &__title {
         font-weight: 700;
@@ -141,15 +148,13 @@
 }
 
 .footer-form {
-    // margin-right: auto;
-    // margin-left: auto;
     width: 100%;
     text-align: center;
 
     @media screen and (min-width: 1200px) {
         text-align: start;
         width: 570px;
-        // margin-left: auto;
+        margin-left: auto;
     }
 
     &__title {
@@ -169,15 +174,12 @@
     @media screen and (min-width: 1200px) {
             display: flex;
             align-items: center;
-            
-                justify-content: center;
-            
+            justify-content: center;
         }
 
     &__input {
         padding: 15px 16px;
         max-width: 450px;
-
         width: 100%;
         height: 50px;
         @media screen and (min-width: 1200px) {

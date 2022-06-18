@@ -1,5 +1,4 @@
 .features-list {
-
     @media screen and (min-width: 768px) {
         display: flex;
         flex-wrap: wrap;
@@ -15,7 +14,6 @@
         }
 
         @media screen and (min-width: 768px) and (max-width: 1199.98px) {
-            // width: 354px;
             width: calc((100% - 30px) / 2);
 
             &:nth-child(odd) {
@@ -28,7 +26,6 @@
         }
 
         @media screen and (min-width: 1200px) {
-            // width: 270px;
             width: calc((100% - 90px) / 4);
 
             &:not(:last-child) {
