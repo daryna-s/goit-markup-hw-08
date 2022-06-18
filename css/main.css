@@ -538,7 +538,6 @@ address {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-top: 64px;
 }
 
 .header-socials__item {
