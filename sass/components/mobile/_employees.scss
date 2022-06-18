@@ -34,7 +34,7 @@
         border-radius: 0px 0px 4px 4px;
 
         @media screen and (max-width: 767.98px) {
-            width: 450px;
+            width: 100%;
 
             &:not(:last-child) {
                 margin-bottom: 30px;
@@ -54,6 +54,7 @@
         }
 
         @media screen and (min-width: 1200px) {
+            width: calc((100% - 90px) / 4);
 
             &:not(:last-child) {
                 margin-right: 30px;
@@ -126,5 +127,4 @@
         .socials__link:focus & {
             fill: var(--next2-txt-cl);
         }
-    }
-}
+    }}
