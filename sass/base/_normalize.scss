@@ -11,6 +11,13 @@ body {
     color: var(--main-txt-cl);
     background-color: var(--main-bg-cl)
 }
+body {
+
+    &.is-modal-shown,
+    &.is-menu-shown {
+        overflow: hidden;
+    }
+}
 
 h1,
 h2,
