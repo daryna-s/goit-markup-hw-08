@@ -12,6 +12,7 @@
 .backdrop.is-hidden {
     opacity: 0;
     pointer-events: none;
+    
 }
 
 .modal {
@@ -26,6 +27,8 @@
     border-radius: 4px;
     padding: 40px;
     margin: 0 auto;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 
     &__btn {
         @extend %centeredFlex;
@@ -40,6 +43,7 @@
         border: 1px solid rgba(0, 0, 0, 0.1);
         background-color: var(--main-bg-cl);
         cursor: pointer;
+        
     }
 
     &__icon {
