@@ -836,20 +836,22 @@ address {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 30px;
-  fill: var(--main-bg-cl);
-  background-size: contain;
-  background-origin: content-box;
-  -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form__checkbox:hover .form__check,
-.form__checkbox:focus .form__check {
-  border-color: var(--accent-bg-cl);
+.form__checkbox-conteiner {
+  position: relative;
+  display: block;
+  width: 16px;
+  height: 15px;
+  margin-right: 8px;
+  cursor: pointer;
 }
 
 .form__input-checkbox {
@@ -859,26 +861,46 @@ address {
   position: absolute;
 }
 
-.form__check {
-  margin-right: 8px;
-  border: 2px solid var(--next3-txt-cl);
-  border-radius: 2px;
-  --color1: #fff;
-  --color2: #fff;
-  -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.form__check--check {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  border-radius: 4px;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form__input-checkbox:checked + .form__check {
-  background-size: contain;
-  background-origin: content-box;
-  border: none;
-  --color1: #2196f3;
-  --color2: #fff;
+.form__check--uncheck {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 4px;
+  border: 2px solid var(--next3-txt-cl);
+  -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form__checkbox:hover .form__check--uncheck,
+.form__checkbox:focus .form__check--uncheck {
+  border-color: var(--accent-bg-cl);
 }
 
 .form__input-checkbox:focus + .form__check {
   border-color: var(--accent-bg-cl);
+}
+
+.form__input-checkbox:checked ~ .form__check--uncheck {
+  border-color: var(--accent-bg-cl);
+}
+
+.form__input-checkbox:checked ~ .form__check--check {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
 }
 
 .form__icon-checkbox {
@@ -1772,7 +1794,6 @@ address {
   position: absolute;
   width: 100%;
   height: 100%;
-  padding: 77px 24px;
   top: 0;
   left: 0;
   opacity: 0;
@@ -1797,15 +1818,15 @@ address {
   line-height: 1.56;
   letter-spacing: 0.03em;
   margin: 0;
-  padding: 0;
+  padding: 63px 24px;
   color: var(--next2-txt-cl);
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 767.98px) {
   .container-overlay__text {
-    padding: 24px;
-    font-size: 14px;
-    line-height: 1.56;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
   }
 }
 
