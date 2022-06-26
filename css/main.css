@@ -619,14 +619,14 @@ address {
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media screen and (max-width: 767.98px) {
+@media screen and (max-width: 479.98px) {
   .modal {
     width: 90vw;
     max-height: 100vh;
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+@media screen and (min-width: 480px) and (max-width: 1199.98px) {
   .modal {
     width: 450px;
     max-height: 100vh;
