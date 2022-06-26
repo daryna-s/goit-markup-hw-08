@@ -216,15 +216,15 @@
     -moz-appearance: none;
     appearance: none;
     position: absolute;
-    // width: 1px;
-    // height: 1px;
-    // margin: -1px;
-    // border: none;
-    // padding: 0;
-    // white-space: nowrap;
-    // clip-path: inset(100%);
-    // clip: rect(0 0 0 0);
-    // overflow: hidden;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: none;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
     }
 .form__check--check{
     position: absolute;
@@ -243,9 +243,11 @@
         left: 0;
         display: block;
         border-radius: 4px;
+        width: 16px;
+        height: 15px;
         border: 2px solid var(--next3-txt-cl);
         
-        transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form__checkbox:hover .form__check--uncheck,
 .form__checkbox:focus .form__check--uncheck {
@@ -267,7 +269,6 @@
 .form__icon-checkbox {
     font-size: 12px;
     line-height: 1.17;
-    letter-spacing: 0.03em;
 
     color: var(--main-txt-cl);
     @media screen and (min-width:1200px){
