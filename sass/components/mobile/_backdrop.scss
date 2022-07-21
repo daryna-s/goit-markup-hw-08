@@ -33,12 +33,12 @@
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 
-    @media screen and (max-width: 767.98px) {
+    @media screen and (max-width: 479.98px) {
         width: 90vw;
         max-height: 100vh;
     }
 
-    @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+    @media screen and (min-width: 480px) and (max-width: 1199.98px) {
         width: 450px;
         max-height: 100vh;
     }
@@ -194,17 +194,18 @@
 
 .form__checkbox {
     display: flex;
+    justify-content: center;
     align-items: center;
     margin-bottom: 30px;
-    fill: var(--main-bg-cl);
-    background-size: contain;
-    background-origin: content-box;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
-
-.form__checkbox:hover .form__check,
-.form__checkbox:focus .form__check {
-    border-color: var(--accent-bg-cl);
+.form__checkbox-conteiner{
+    position: relative;
+    display: block;
+    width: 16px;
+        height: 15px;
+        margin-right: 8px;
+        cursor: pointer;    
 }
 
 .form__input-checkbox {
@@ -212,33 +213,59 @@
     -moz-appearance: none;
     appearance: none;
     position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: none;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    }
+.form__check--check{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    border-radius: 4px;
+    
+    transform: scale(0.9);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form__check {
-    margin-right: 8px;
-    border: 2px solid var(--next3-txt-cl);
-    border-radius: 2px;
-    --color1: #fff;
-    --color2: #fff;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.form__check--uncheck{
+    position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        border-radius: 4px;
+        width: 16px;
+        height: 15px;
+        border: 2px solid var(--next3-txt-cl);
+        
+        transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form__checkbox:hover .form__check--uncheck,
+.form__checkbox:focus .form__check--uncheck {
+    border-color: var(--accent-bg-cl);
+}
 
-    .form__input-checkbox:checked+& {
-        background-size: contain;
-        background-origin: content-box;
-        border: none;
-        --color1: #2196f3;
-        --color2: #fff;
-    }
-
-    .form__input-checkbox:focus+& {
+    .form__input-checkbox:focus+.form__check{
         border-color: var(--accent-bg-cl);
     }
+
+.form__input-checkbox:checked~.form__check--uncheck {
+    border-color: var(--accent-bg-cl);
 }
 
+.form__input-checkbox:checked~.form__check--check {
+    transform: scale(1);
+    opacity: 1;
+}
 .form__icon-checkbox {
     font-size: 12px;
     line-height: 1.17;
-    letter-spacing: 0.03em;
 
     color: var(--main-txt-cl);
     @media screen and (min-width:1200px){
